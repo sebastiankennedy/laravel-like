@@ -1,0 +1,29 @@
+{
+    "name": "sebastian-kennedy\/laravel-like",
+    "description": "User like features for laravel application.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SebastianKennedy",
+            "email": "sebastiankennedy@foxmail.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^6.0|^7.0"
+    },
+    "require-dev": {
+        "laravel/framework": "^6.0|^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SebastianKennedy\\LaravelLike\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SebastianKennedy\\LaravelLike\\LikeServiceProvider"
+            ]
+        }
+    }
+}
