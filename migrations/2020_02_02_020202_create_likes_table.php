@@ -15,19 +15,16 @@ class CreateLikesTable extends Migration
     public function up()
     {
         Schema::create(
-            config('like.likes_table'),
+            config('like.table_name'),
             function (Blueprint $table) {
-                $name = config('like.morph_many_name') ?: 'likable';
-                $foreign_key = config('like.foreign_key') ?: 'user_id';
-
                 $table->bigIncrements('id');
-                $table->unsignedBigInteger($foreign_key);
-                $table->string($name . '_type');
-                $table->unsignedBigInteger($name . '_id');
+                $table->unsignedBigInteger(config('like.foreign_key'));
+                $table->string(config('like.morph_many_id'));
+                $table->unsignedBigInteger(config('like.morph_many_type'));
                 $table->timestamps();
 
-                $table->index($foreign_key);
-                $table->index(["{$name}_type", "{$name}_id"]);
+                $table->index(config('like.foreign_key'));
+                $table->index([config('like.morph_many_type'), config('like.morph_many_id')]);
             }
         );
     }
@@ -37,6 +34,6 @@ class CreateLikesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('like.likes_table'));
+        Schema::dropIfExists(config('like.table_name'));
     }
 }
