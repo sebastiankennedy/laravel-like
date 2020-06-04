@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Behaviors;
+namespace SebastianKennedy\LaravelLike\Behaviors;
 
 use Illuminate\Database\Eloquent\Model;
 
