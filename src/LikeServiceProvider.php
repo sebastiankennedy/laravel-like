@@ -13,16 +13,16 @@ class LikeServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        $this->publishes([__DIR__ . '/../config/like.php' => config_path('like.php')], 'config');
-        $this->publishes([__DIR__ . '/../migrations/' => database_path('migrations')], 'migrations');
+        $this->publishes([dirname(__DIR__) . '/config/like.php' => config_path('like.php')], 'config');
+        $this->publishes([dirname(__DIR__) . '/migrations/' => database_path('migrations')], 'migrations');
 
         if ($this->app->runningInConsole()) {
-            $this->loadMigrationsFrom(__DIR__ . '/../migrations/');
+            $this->loadMigrationsFrom(dirname(__DIR__) . '/migrations/');
         }
     }
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/like.php', 'like');
+        $this->mergeConfigFrom(dirname(__DIR__) . '/config/like.php', 'like');
     }
 }

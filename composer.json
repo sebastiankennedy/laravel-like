@@ -12,11 +12,19 @@
         "laravel/framework": "^6.0|^7.0"
     },
     "require-dev": {
-        "laravel/framework": "^6.0|^7.0"
+        "laravel/framework": "^6.0|^7.0",
+        "phpunit/phpunit": "^9.2",
+        "mockery/mockery": "^1.4",
+        "orchestra/testbench": "^5.3"
     },
     "autoload": {
         "psr-4": {
             "SebastianKennedy\\LaravelLike\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SebastianKennedy\\LaravelLike\\Tests\\": "tests"
         }
     },
     "extra": {
