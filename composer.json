@@ -15,7 +15,9 @@
         "laravel/framework": "^6.0|^7.0",
         "phpunit/phpunit": "^9.2",
         "mockery/mockery": "^1.4",
-        "orchestra/testbench": "^5.3"
+        "orchestra/testbench": "^5.3",
+        "brainmaestro/composer-git-hooks": "^2.8",
+        "friendsofphp/php-cs-fixer": "^2.16"
     },
     "autoload": {
         "psr-4": {
@@ -32,6 +34,30 @@
             "providers": [
                 "SebastianKennedy\\LaravelLike\\LikeServiceProvider"
             ]
+        },
+        "hooks": {
+            "pre-commit": [
+                "composer test",
+                "composer fix-code-style"
+            ],
+            "pre-push": [
+                "composer test",
+                "composer check-code-style"
+            ]
         }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "cghooks update"
+        ],
+        "post-merge": "composer install",
+        "post-install-cmd": [
+            "cghooks add --ignore-lock",
+            "cghooks update"
+        ],
+        "test": "vendor/bin/phpunit --colors=always",
+        "cghooks": "vendor/bin/cghooks",
+        "fix-code-style": "php-cs-fixer fix --using-cache=no --config=.php_cs --ansi",
+        "check-code-style": "php-cs-fixer fix --using-cache=no --diff --config=.php_cs --dry-run --ansi"
     }
 }

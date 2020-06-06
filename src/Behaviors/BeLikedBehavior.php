@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * This file is part of the sebastian-kennedy/laravel-like.
+ *
+ * (c) SebastianKennedy <sebastiankennedy@foxmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled.
+ */
+
 namespace SebastianKennedy\LaravelLike\Behaviors;
 
 use Illuminate\Database\Eloquent\Model;
@@ -33,6 +41,6 @@ trait BeLikedBehavior
             config('like.table_name'),
             config('like.morph_many_id'),
             config('like.foreign_key')
-        )->where('likeable_type', $this->getMorphClass());
+        )->where(config('like.morph_many_type'), $this->getMorphClass());
     }
 }

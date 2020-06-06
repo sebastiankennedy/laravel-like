@@ -1,11 +1,18 @@
 <?php
 
+/*
+ * This file is part of the sebastian-kennedy/laravel-like.
+ *
+ * (c) SebastianKennedy <sebastiankennedy@foxmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled.
+ */
+
 namespace SebastianKennedy\LaravelLike;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Query\Builder;
-use SebastianKennedy\Events\LikedEvent;
-use SebastianKennedy\Events\UnLikedEvent;
+use SebastianKennedy\LaravelLike\Events\LikedEvent;
+use SebastianKennedy\LaravelLike\Events\UnLikedEvent;
 
 /**
  * Class Like
@@ -45,10 +52,10 @@ class Like extends Model
 
     public function user()
     {
-        return $this->belongsTo(config_path('auth.providers.users.model'), config('like.foreign_key'));
+        return $this->belongsTo(config('auth.providers.users.model'), config('like.foreign_key'));
     }
 
-    public function scopeWithType(Builder $query, $type)
+    public function scopeWithType($query, $type)
     {
         return $query->where(config('like.morph_many_type'), app($type)->getMorphClass());
     }
