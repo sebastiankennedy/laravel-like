@@ -30,10 +30,10 @@ return [
     'table_name' => 'likes',
     /*
     |----------------------------------------------------------------------
-    | Like Model Relationship Field Name
+    | Like Model Relationship Fields Name
     |--------------------------------------------------------------------------
     |
-    | This option define a field name of polymorphic many-to-many relationship
+    | This option define fields name of polymorphic many-to-many relationship
     |
     */
     'morph_many_id' => 'likable_id',
