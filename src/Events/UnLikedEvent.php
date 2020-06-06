@@ -4,7 +4,7 @@ namespace SebastianKennedy\Events;
 
 use SebastianKennedy\LaravelLike\Like;
 
-class UnLiked
+class UnLikedEvent
 {
     public $like;
 
