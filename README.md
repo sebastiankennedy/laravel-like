@@ -2,18 +2,12 @@
 
 <p align="center"> User like features for laravel application..</p>
 
-[![Build Status](https://travis-ci.org/sebastiankennedy/laravel-like.svg?branch=master)](https://travis-ci.org/sebastiankennedy/laravel-like)
-[![Latest Stable Version](https://poser.pugx.org/sebastian-kennedy/laravel-like/v)](//packagist.org/packages/sebastian-kennedy/laravel-like) 
-[![Total Downloads](https://poser.pugx.org/sebastian-kennedy/laravel-like/downloads)](//packagist.org/packages/sebastian-kennedy/laravel-like) 
-[![Latest Unstable Version](https://poser.pugx.org/sebastian-kennedy/laravel-like/v/unstable)](//packagist.org/packages/sebastian-kennedy/laravel-like) 
-[![License](https://poser.pugx.org/sebastian-kennedy/laravel-like/license)](//packagist.org/packages/sebastian-kennedy/laravel-like)
-
 <p align="center">
 <a href="https://travis-ci.org/sebastiankennedy/laravel-like"><img src="https://travis-ci.org/sebastiankennedy/laravel-like.svg?branch=master" alt="Build Status"></a>
 <a href="https://packagist.org/packages/sebastian-kennedy/laravel-like"><img src="https://poser.pugx.org/sebastian-kennedy/laravel-like/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/sebastian-kennedy/laravel-like"><img src="https://poser.pugx.org/sebastian-kennedy/laravel-like/v/unstable.svg" alt="Latest Unstable Version"></a>
-<a href="https://scrutinizer-ci.com/g/sebastian-kennedy/laravel-like/?branch=master"><img src="https://scrutinizer-ci.com/g/sebastian-kennedy/laravel-like/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"></a>
-<a href="https://scrutinizer-ci.com/g/sebastian-kennedy/laravel-like/?branch=master"><img src="https://scrutinizer-ci.com/g/sebastian-kennedy/laravel-like/badges/coverage.png?b=master" alt="Code Coverage"></a>
+<a href="https://scrutinizer-ci.com/g/sebastiankennedy/laravel-like/?branch=master"><img src="https://scrutinizer-ci.com/g/sebastiankennedy/laravel-like/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"></a>
+<a href="https://scrutinizer-ci.com/g/sebastiankennedy/laravel-like/?branch=master"><img src="https://scrutinizer-ci.com/g/sebastiankennedy/laravel-like/badges/coverage.png?b=master" alt="Code Coverage"></a>
 <a href="https://packagist.org/packages/sebastian-kennedy/laravel-like"><img src="https://poser.pugx.org/sebastian-kennedy/laravel-like/downloads" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/sebastian-kennedy/laravel-like"><img src="https://poser.pugx.org/sebastian-kennedy/laravel-like/license" alt="License"></a>
 </p>
