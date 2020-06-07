@@ -24,7 +24,54 @@ $ php artisan vendor:publish --provider="SebastianKennedy\\LaravelLike\\LikeServ
 
 ## Usage
 
-TODO
+#### BeLikedBehavior.php
+```php
+<?php
+
+namespace SebastianKennedy\LaravelLike\Tests\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use SebastianKennedy\LaravelLike\Behaviors\BeLikedBehavior;
+
+class Book extends Model
+{
+    use BeLikedBehavior;
+
+    protected $fillable = ['title'];
+}
+```
+
+#### ToLikeBehavior.php
+```php
+<?php
+
+namespace SebastianKennedy\LaravelLike\Tests\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use SebastianKennedy\LaravelLike\Behaviors\ToLikeBehavior;
+
+class User extends Model
+{
+    use ToLikeBehavior;
+    protected $fillable = ['name'];
+}
+```
+
+## API
+```
+$user = User::first();
+$book = Book::first();
+
+$user-like($book);
+$user->unlike($book);
+$user->toggleLike($book);
+$user->hasLiked($book);
+$user->likes();
+
+$book->isLikedBy($user);
+$book->likes();
+$book->likers();
+```
 
 ## Contributing
 
