@@ -9,6 +9,7 @@
         }
     ],
     "require": {
+        "PHP": "^7.3",
         "laravel/framework": "^6.0|^7.0"
     },
     "require-dev": {
