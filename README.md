@@ -2,11 +2,24 @@
 
 <p align="center"> User like features for laravel application..</p>
 
+[![Build Status](https://travis-ci.org/sebastiankennedy/laravel-like.svg?branch=master)](https://travis-ci.org/sebastiankennedy/laravel-like)
 
 ## Installing
 
 ```shell
 $ composer require sebastian-kennedy/laravel-like -vvv
+```
+
+## Configuration
+
+```shell
+$ php artisan vendor:publish --provider="SebastianKennedy\\LaravelLike\\LikeServiceProvider" --tag=config
+```
+
+## Migrations
+
+```shell
+$ php artisan vendor:publish --provider="SebastianKennedy\\LaravelLike\\LikeServiceProvider" --tag=migrations
 ```
 
 ## Usage
