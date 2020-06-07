@@ -2,11 +2,13 @@
 
 <p align="center"> User like features for laravel application..</p>
 
+<p align="center">
 [![Build Status](https://travis-ci.org/sebastiankennedy/laravel-like.svg?branch=master)](https://travis-ci.org/sebastiankennedy/laravel-like)
 [![Latest Stable Version](https://poser.pugx.org/sebastian-kennedy/laravel-like/v)](//packagist.org/packages/sebastian-kennedy/laravel-like) 
 [![Total Downloads](https://poser.pugx.org/sebastian-kennedy/laravel-like/downloads)](//packagist.org/packages/sebastian-kennedy/laravel-like) 
 [![Latest Unstable Version](https://poser.pugx.org/sebastian-kennedy/laravel-like/v/unstable)](//packagist.org/packages/sebastian-kennedy/laravel-like) 
 [![License](https://poser.pugx.org/sebastian-kennedy/laravel-like/license)](//packagist.org/packages/sebastian-kennedy/laravel-like)
+</p>
 
 ## Installing
 
