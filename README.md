@@ -1,6 +1,6 @@
 <h1 align="center"> laravel-like </h1>
 
-<p align="center"> User like features for laravel application..</p>
+<p align="center"> User like feature for laravel application.</p>
 
 <p align="center">
 <a href="https://travis-ci.org/sebastiankennedy/laravel-like"><img src="https://travis-ci.org/sebastiankennedy/laravel-like.svg?branch=master" alt="Build Status"></a>
@@ -12,6 +12,15 @@
 <a href="https://packagist.org/packages/sebastian-kennedy/laravel-like"><img src="https://poser.pugx.org/sebastian-kennedy/laravel-like/license" alt="License"></a>
 </p>
 
+## References
+
+- https://github.com/overtrue/laravel-like
+- https://github.com/overtrue/laravel-follow
+
+## Requires
+
+- PHP >= 7.3
+- Laravel >= 6.*
 
 ## Installing
 
