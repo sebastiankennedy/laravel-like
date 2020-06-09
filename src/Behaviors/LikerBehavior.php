@@ -12,7 +12,7 @@ namespace SebastianKennedy\LaravelLike\Behaviors;
 
 use Illuminate\Database\Eloquent\Model;
 
-trait ToLikeBehavior
+trait LikerBehavior
 {
     public function toggleLike(Model $model)
     {

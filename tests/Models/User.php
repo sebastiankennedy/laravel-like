@@ -11,10 +11,10 @@
 namespace SebastianKennedy\LaravelLike\Tests\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use SebastianKennedy\LaravelLike\Behaviors\ToLikeBehavior;
+use SebastianKennedy\LaravelLike\Behaviors\LikerBehavior;
 
 class User extends Model
 {
-    use ToLikeBehavior;
+    use LikerBehavior;
     protected $fillable = ['name'];
 }

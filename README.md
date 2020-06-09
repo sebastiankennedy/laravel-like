@@ -20,7 +20,7 @@
 ## Requires
 
 - PHP >= 7.3
-- Laravel >= 6.*
+- Laravel >= ^6.0
 
 ## Installing
 
@@ -66,11 +66,11 @@ class Book extends Model
 namespace SebastianKennedy\LaravelLike\Tests\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use SebastianKennedy\LaravelLike\Behaviors\ToLikeBehavior;
+use SebastianKennedy\LaravelLike\Behaviors\LikerBehavior;
 
 class User extends Model
 {
-    use ToLikeBehavior;
+    use LikerBehavior;
     protected $fillable = ['name'];
 }
 ```
@@ -101,11 +101,7 @@ You can contribute in one of three ways:
 2. Answer questions or fix bugs on the [issue tracker](https://github.com/sebastian-kennedy/laravel-like/issues).
 3. Contribute new features or update the wiki.
 
-_The code contribution process is not very formal. You just need to make sure that you follow the PSR-0, PSR-1, and PSR-2 coding guidelines. Any new code contributions must be accompanied by unit tests where applicable._
-
-## Thanks
-
-
+_The code contribution process is not very formal. You just need to make sure that you follow the PSR-0, PSR-1, and PSR-12 coding guidelines. Any new code contributions must be accompanied by unit tests where applicable._
 
 ## License
 
