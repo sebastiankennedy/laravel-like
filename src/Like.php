@@ -33,21 +33,14 @@ class Like extends Model
         parent::__construct($attributes);
     }
 
-    protected static function boot()
-    {
-        parent::boot();
-
-        self::saving(
-            function ($like) {
-                $foreign_key = config('like.foreign_key');
-                $like->{$foreign_key} = $like->{$foreign_key} ?: auth()->user()->getKey();
-            }
-        );
-    }
-
     public function likable()
     {
         return $this->morphTo();
+    }
+
+    public function liker()
+    {
+        return $this->relationLoaded('user') ? $this->user : $this->user();
     }
 
     public function user()

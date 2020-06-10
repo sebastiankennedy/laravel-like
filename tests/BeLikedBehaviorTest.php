@@ -10,6 +10,8 @@
 
 namespace SebastianKennedy\LaravelLike\Behaviors;
 
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 use SebastianKennedy\LaravelLike\Tests\LaravelLikeTest;
 use SebastianKennedy\LaravelLike\Tests\Models\Book;
 use SebastianKennedy\LaravelLike\Tests\Models\Post;
@@ -19,12 +21,20 @@ class BeLikedBehaviorTest extends LaravelLikeTest
 {
     public function testIsLikedBy()
     {
-        $user = User::create(['name' => 'User']);
         $post = Post::create(['title' => 'Post']);
         $book = Book::create(['title' => 'Book']);
+        $user1 = User::create(['name' => 'User']);
+        $user2 = User::create(['name' => 'User']);
 
-        $this->assertFalse($book->isLikedBy($user));
-        $this->assertFalse($post->isLikedBy($user));
+        $user1->like($post);
+        $this->assertTrue($post->isLikedBy($user1));
+        $this->assertFalse($book->isLikedBy($user1));
+
+        $user2->like($post);
+        $this->assertSame(2, $post->likers->count());
+        $this->assertTrue($post->isLikedBy($user2));
+
+        $post->isLikedBy($book);
     }
 
     public function testLikes()
@@ -37,10 +47,15 @@ class BeLikedBehaviorTest extends LaravelLikeTest
         $user1->like($book);
         $user2->like($book);
         $user3->like($book);
+        $this->isInstanceOf(MorphMany::class, get_class($book->likes()));
         $this->assertSame(3, $book->likes()->count());
 
         $user1->unlike($book);
         $this->assertSame(2, $book->likes()->count());
+
+        $user2->unlike($book);
+        $user3->unlike($book);
+        $this->isInstanceOf(Collection::class, get_class($book->likes()->get()));
     }
 
     public function testLikers()

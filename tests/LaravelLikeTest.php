@@ -12,14 +12,10 @@ namespace SebastianKennedy\LaravelLike\Tests;
 
 use Illuminate\Support\Facades\Event;
 use Orchestra\Testbench\TestCase;
-use SebastianKennedy\LaravelLike\Events\LikedEvent;
-use SebastianKennedy\LaravelLike\Events\UnLikedEvent;
 use SebastianKennedy\LaravelLike\LikeServiceProvider;
-use SebastianKennedy\LaravelLike\Tests\Models\Book;
-use SebastianKennedy\LaravelLike\Tests\Models\Post;
 use SebastianKennedy\LaravelLike\Tests\Models\User;
 
-class LaravelLikeTest extends TestCase
+abstract class LaravelLikeTest extends TestCase
 {
     protected function getPackageProviders($app)
     {
