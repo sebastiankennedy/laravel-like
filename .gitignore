@@ -8,3 +8,5 @@ composer.lock
 .php_cs.cache
 cghooks.lock
 /tests/reports
+ocular.phar
+coverage.xml
