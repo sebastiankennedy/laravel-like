@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1591955909">
-  <project timestamp="1591955909">
+<coverage generated="1591955943">
+  <project timestamp="1591955943">
     <package name="SebastianKennedy\LaravelLike\Behaviors">
       <file name="/Users/sebastian/Code/Composer/laravel-like/src/Behaviors/BeLikedBehavior.php">
         <class name="SebastianKennedy\LaravelLike\Behaviors\BeLikedBehavior" namespace="SebastianKennedy\LaravelLike\Behaviors">

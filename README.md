@@ -16,6 +16,7 @@
 
 - https://github.com/overtrue/laravel-like
 - https://github.com/overtrue/laravel-follow
+- https://github.com/hypefactors/laravel-follow
 
 ## Requires
 

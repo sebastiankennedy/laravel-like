@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "PHP": "^7.3",
+        "PHP": "^7.2.5",
         "laravel/framework": "^6.0|^7.0"
     },
     "require-dev": {
@@ -56,7 +56,7 @@
             "cghooks add --ignore-lock",
             "cghooks update"
         ],
-        "test": "vendor/bin/phpunit --colors=always --coverage-clover=./coverage.xml",
+        "test": "vendor/bin/phpunit phpunit --verbose --coverage-text --coverage-clover=coverage.clover",
         "cghooks": "vendor/bin/cghooks",
         "fix-code-style": "php-cs-fixer fix --using-cache=no --config=.php_cs --ansi",
         "check-code-style": "php-cs-fixer fix --using-cache=no --diff --config=.php_cs --dry-run --ansi"
