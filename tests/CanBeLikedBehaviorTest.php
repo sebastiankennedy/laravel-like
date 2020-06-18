@@ -17,7 +17,7 @@ use SebastianKennedy\LaravelLike\Tests\Models\Book;
 use SebastianKennedy\LaravelLike\Tests\Models\Post;
 use SebastianKennedy\LaravelLike\Tests\Models\User;
 
-class BeLikedBehaviorTest extends LaravelLikeTest
+class CanBeLikedBehaviorTest extends LaravelLikeTest
 {
     public function testIsLikedBy()
     {

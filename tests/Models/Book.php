@@ -11,11 +11,11 @@
 namespace SebastianKennedy\LaravelLike\Tests\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use SebastianKennedy\LaravelLike\Behaviors\BeLikedBehavior;
+use SebastianKennedy\LaravelLike\Behaviors\CanBeLikedBehavior;
 
 class Book extends Model
 {
-    use BeLikedBehavior;
+    use CanBeLikedBehavior;
 
     protected $fillable = ['title'];
 }

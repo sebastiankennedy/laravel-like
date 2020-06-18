@@ -27,8 +27,8 @@ class CreateLikesTable extends Migration
             function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->unsignedBigInteger(config('like.foreign_key'));
-                $table->string(config('like.morph_many_id'));
-                $table->unsignedBigInteger(config('like.morph_many_type'));
+                $table->unsignedBigInteger(config('like.morph_many_id'));
+                $table->string(config('like.morph_many_type'));
                 $table->timestamps();
 
                 $table->index(config('like.foreign_key'));

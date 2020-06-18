@@ -12,7 +12,7 @@ namespace SebastianKennedy\LaravelLike\Behaviors;
 
 use Illuminate\Database\Eloquent\Model;
 
-trait BeLikedBehavior
+trait CanBeLikedBehavior
 {
     public function isLikedBy(Model $user)
     {

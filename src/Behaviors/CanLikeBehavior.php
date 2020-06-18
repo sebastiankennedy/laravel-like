@@ -12,7 +12,7 @@ namespace SebastianKennedy\LaravelLike\Behaviors;
 
 use Illuminate\Database\Eloquent\Model;
 
-trait LikerBehavior
+trait CanLikeBehavior
 {
     public function toggleLike(Model $model)
     {
@@ -28,7 +28,10 @@ trait LikerBehavior
             ->first();
 
         if ($relation) {
-            return $relation->delete();
+            $result = $relation->delete();
+            $this->refresh();
+
+            return $result;
         }
 
         return null;
@@ -42,7 +45,10 @@ trait LikerBehavior
             $like->{config('like.morph_many_id')} = $model->getKey();
             $like->{config('like.morph_many_type')} = $model->getMorphClass();
 
-            return $this->likes()->save($like);
+            $like = $this->likes()->save($like);
+            $this->refresh();
+
+            return $like;
         }
 
         return null;
